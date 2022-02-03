@@ -18,6 +18,6 @@
 
 
 
-#### after the construction of the tree it should look like this
+## After the construction of the tree it should look like this:
 
 ![tree](./out/tree.jpg)
