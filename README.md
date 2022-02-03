@@ -20,4 +20,4 @@
 
 #### after the construction of the tree it should look like this
 
-![tree](./tree.jpg)
+![tree](./out/tree.jpg)
