@@ -22,7 +22,7 @@ Node *insert_tree(Node *root, Node *node) {
         Node *prev = NULL;
         bool run = true;
 
-        while (run == true && curr != NULL) {
+        while (curr != NULL) {
             if (curr->data > node->data) {
                 prev = curr;
                 curr = curr->left;
@@ -31,10 +31,6 @@ Node *insert_tree(Node *root, Node *node) {
                 curr = curr->right;
             } else {                
                 return root;
-            }
-
-            if (curr == NULL) {
-                run = false;
             }
         }
 
