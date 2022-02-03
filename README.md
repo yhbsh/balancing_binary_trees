@@ -30,14 +30,14 @@
 * and it makes the left subtree a decreasing list of nodes having only exactly one left child
 * this transoformation is obtained by:
     >1- for the right subtree:
-        * starting from the right child of the root
-        * perform right rotations for each node until no left child remains
-        * after that go right and repeat the second step
+        >>* starting from the right child of the root
+        >>* perform right rotations for each node until no left child remains
+        >>* after that go right and repeat the second step
     
     >2- for the left subtree:
-        * starting from the left child of the root
-        * perform left rotations for each node until no right child remains
-        * after that go left and repeat the second step
+        >>* starting from the left child of the root
+        >>* perform left rotations for each node until no right child remains
+        >* after that go left and repeat the second step
 
     
 * after performing this simple algorithm we should obtain the following result:
