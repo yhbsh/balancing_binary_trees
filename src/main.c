@@ -18,7 +18,7 @@ int main() {
 
     draw(root, &out);
 
-    second_transformation(root);
+    third_transformation(root);
 
 
     draw(root, &out);
