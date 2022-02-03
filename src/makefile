@@ -1,6 +1,4 @@
 
-draw: run
-	dot -Tjpg ../out/out.dot -o ../out/out.jpg && ..\\out\\out.jpg
 
 
 run: build

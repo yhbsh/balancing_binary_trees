@@ -38,7 +38,7 @@ void draw_tree_dot(Node* R, FILE *f, int *nbNil)
 
 
 
-void draw(Node* root)
+void draw(Node* root, int *out)
 {
 
     int nbNil;
@@ -48,7 +48,9 @@ void draw(Node* root)
         printf("> ERREUR : Arbre vide !");
     else
     {
-        f = fopen("../out/out.dot", "w");
+        char file_path[20];
+        sprintf(file_path, "../out/out%d.dot", *out);
+        f = fopen(file_path, "w");
 
         fprintf(f, "digraph arbre {\n");
 
@@ -60,6 +62,13 @@ void draw(Node* root)
 
         fprintf(f, "}\n");
         fclose(f);
+
+        char cmd[20];
+        sprintf(cmd, "dot -Tjpg ../out/out%d.dot -o ../out/out%d.jpg && ..\\out\\out%d.jpg", *out, *out, *out);
+
+        system(cmd);
     
+        (*out)++;
     }
+
 }

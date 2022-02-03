@@ -70,3 +70,80 @@ Node *init_tree(int n) {
     return root;
 
 }
+
+
+Node *right_rotation(Node *node, Node* parent) {
+
+
+    Node *left_child = node->left;
+    if (left_child != NULL) {
+        Node *tmp = left_child->right;
+        left_child->right = node;            
+        node->left = tmp;
+
+        
+
+        if (parent == NULL) {
+            return left_child;
+        }
+
+        parent->right = left_child;
+}
+
+    
+    return left_child;
+}
+
+
+Node *left_rotation(Node *node, Node *parent) {
+    Node *right_child = node->right;
+    
+    if (right_child != NULL) {
+        Node *tmp = right_child->left;
+        right_child->left = node;
+        node->right = tmp;
+        
+
+        if (parent == NULL) {
+            return right_child;
+        }
+
+        parent->left = right_child;
+
+    }
+    
+    
+    return right_child;
+}
+
+
+
+void first_transformation(Node *root) {
+        
+    Node *parent;
+    Node *curr;
+    int out = 0;
+
+    
+    parent = root;
+    curr = root->left;
+    while (curr != NULL) {
+        if (curr->right != NULL) {
+            curr = left_rotation(curr, parent);
+        } else {
+            parent = curr;
+            curr = curr->left;
+        }
+    }
+
+    parent = root;
+    curr = root->right;
+    while(curr != NULL) {
+        if (curr->left != NULL) {
+            curr = right_rotation(curr, parent);
+        } else {
+            parent = curr;
+            curr = curr->right;
+        }
+    }
+}
