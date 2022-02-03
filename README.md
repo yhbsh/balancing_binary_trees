@@ -44,6 +44,7 @@
 >![first](./out/first_transformation.jpg)
 
 >## The second transformation is different
+* first the tree must be transformed via the first transformation in order for this to work!
 * it makes the every node in the right and left subtrees have a determined number of left/right children
 * this determined number is generated using the formula:
 > * Un = Un-1 + k
@@ -60,5 +61,9 @@
 > 6- if both are leaves then stop the algorithm!
 
 
+
+* so we have the following tree and we want to make the second transformation on it
+>![second_before](./out/second_transformation_before.jpg)
+
 * after performing this algorithm we should obtain the following result:
->![second](./out/second_transformation.jpg)
+>![second_after](./out/second_transformation_after.jpg)
