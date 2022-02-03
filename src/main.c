@@ -3,6 +3,7 @@
 
 
 
+
 int main() {
     srand(time(NULL));
 
@@ -18,8 +19,17 @@ int main() {
 
     draw(root, &out);
 
+    second_transformation(root);
+
+    draw(root, &out);
+
     third_transformation(root);
 
+    draw(root, &out);
+
+    forth_transformation(root);
+
+    draw(root, &out);
 
     draw(root, &out);
 

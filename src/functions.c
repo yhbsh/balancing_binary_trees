@@ -242,3 +242,38 @@ void third_transformation(Node *root) {
     }
 
 }
+
+
+
+void forth_transformation(Node *root) {
+
+    Node *curr_left = root->left;
+    Node *curr_right = root->right;
+    Node *parent_left = root;
+    Node *parent_right = root;
+
+
+
+
+    while (curr_left != NULL || curr_right != NULL) {
+        for (int i = 0; i < rand() % 10; i++) {
+            if (curr_left != NULL)
+                curr_left = special_right_rotation(curr_left, parent_left);
+        }
+        for (int i = 0; i < rand() % 10; i++) {
+            if (curr_right != NULL) {
+                curr_right = special_left_rotation(curr_right, parent_right);
+            }
+        }
+        if (curr_left != NULL) {
+            parent_left = curr_left;
+            curr_left = curr_left->left;
+        }
+
+        if (curr_right != NULL) {
+            parent_right = curr_right;
+            curr_right = curr_right->right;
+        }
+    }
+
+}
