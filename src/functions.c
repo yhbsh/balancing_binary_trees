@@ -54,7 +54,7 @@ Node *init_tree(int n) {
     Node *root = init_node(INF, 1); // this is the root
 
     for (int i = 0; i < n; i++) {
-        int data = rand() % 100;
+        int data = rand() % 5000;
         bool color = rand() % 2;
 
         Node *node = init_node(data, color);
@@ -88,10 +88,11 @@ Node *right_rotation(Node *node, Node* parent) {
         }
 
         parent->right = left_child;
-}
 
-    
-    return left_child;
+        return left_child;
+    } else {
+        return node;
+    }
 }
 
 
@@ -108,12 +109,13 @@ Node *left_rotation(Node *node, Node *parent) {
             return right_child;
         }
 
-        parent->left = right_child;
 
+        parent->left = right_child;
+        return right_child;
+    } else {
+        return node;
     }
     
-    
-    return right_child;
 }
 
 
@@ -146,4 +148,65 @@ void first_transformation(Node *root) {
             curr = curr->right;
         }
     }
+}
+
+Node *special_right_rotation(Node *node, Node *parent) {
+    Node *left_child = node->left;
+    if (left_child != NULL) {
+        left_child->right = node;            
+        node->left = NULL;
+        parent->left = left_child;
+
+        return left_child;
+    } else {
+        return node;
+    }
+
+}
+
+Node *special_left_rotation(Node *node, Node *parent) {
+    Node *right_child = node->right;
+    if (right_child != NULL) {
+        right_child->left = node;            
+        node->right = NULL;
+        parent->right = right_child;
+        
+        return right_child;
+    } else {
+        return node;
+    }
+}
+
+void second_transformation(Node *root) {
+
+    Node *curr_left = root->left;
+    Node *curr_right = root->right;
+    Node *parent_left = root;
+    Node *parent_right = root;
+
+    int k = 2;
+    int n = 1;
+
+
+    while (curr_left != NULL || curr_right != NULL) {
+        for (int i = 0; i < k * n; i++) {
+            if (curr_left != NULL)
+                curr_left = special_right_rotation(curr_left, parent_left);
+
+            if (curr_right != NULL) {
+                curr_right = special_left_rotation(curr_right, parent_right);
+            }
+        }
+        if (curr_left != NULL) {
+            parent_left = curr_left;
+            curr_left = curr_left->left;
+        }
+
+        if (curr_right != NULL) {
+            parent_right = curr_right;
+            curr_right = curr_right->right;
+        }
+        n++;
+    }
+
 }

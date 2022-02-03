@@ -15,3 +15,8 @@ Node *left_rotation(Node *node, Node* parent);
 
 
 void first_transformation(Node *root);
+
+
+Node *special_right_rotation(Node *node, Node *parent);
+Node *special_left_rotation(Node *node, Node *parent);
+void second_transformation(Node *root);

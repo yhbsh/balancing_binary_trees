@@ -11,10 +11,14 @@ int main() {
 
     Node *root = init_tree(n);
 
-    draw(root, &out);
+    // draw(root, &out);
 
 
     first_transformation(root);    
+
+    draw(root, &out);
+
+    second_transformation(root);
 
 
     draw(root, &out);

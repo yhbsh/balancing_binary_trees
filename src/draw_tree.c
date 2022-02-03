@@ -16,8 +16,8 @@ void draw_tree_dot(Node* R, FILE *f, int *nbNil)
         }
 
         // Dessiner un fils NIL virtuel et invisible au milieu (pour une meilleure s�paration des fils gauches et droits)
-        fprintf(f, "  \"NIL%d\" [style=invis];\n", *nbNil);
-        fprintf(f, "  \"%d %s\" -> \"NIL%d\" [style=invis];\n", R->data, R->color == true ? "black" : "white",(*nbNil)++);
+        fprintf(f, "\t\"NIL%d\" [style=invis];\n", *nbNil);
+        fprintf(f, "\t\"%d %s\" -> \"NIL%d\" [style=invis];\n", R->data, R->color == true ? "black" : "white",(*nbNil)++);
 
         // Dessiner un arc vers le fils droit
         if (R->right != NULL) {
@@ -26,8 +26,8 @@ void draw_tree_dot(Node* R, FILE *f, int *nbNil)
         }
         else
         {
-            fprintf(f, "\"NIL%d\" [style=invis];\n", *nbNil);
-            fprintf(f, "\"%d %s\" -> \"NIL%d\" [style=invis];\n", R->data, R->color == true ? "black" : "white", (*nbNil)++);
+            fprintf(f, "\t\"NIL%d\" [style=invis];\n", *nbNil);
+            fprintf(f, "\t\"%d %s\" -> \"NIL%d\" [style=invis];\n", R->data, R->color == true ? "black" : "white", (*nbNil)++);
         }
 
         // Dessiner les sous-arbres gauche et droit
