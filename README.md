@@ -1,9 +1,9 @@
-# Binary_Trees_Special_Transformations
+# Binary_Search_Trees_Special_Transformations
 
 * In This Repository, We Implement The Binary Tree Data Structure.
 * After That We Perform Some Very Special Transformations On The Tree Using Some Nice Algorithms
 
-## Binary Tree Structure
+## Binary Search Tree Structure
 
 * the structure of our tree is special
 * because every node contains two values:
@@ -23,9 +23,9 @@
 ![tree](./out/tree.jpg)
 
 
-# Now coming to the transformations
+# now coming to the transformations
 
-* the first transformation is an easy one
+## the first transformation is an easy one
 * it makes the right subtree an increasing list of nodes having only exactly one right child
 * and it makes the left subtree a decreasing list of nodes having only exactly one left child
 * this transoformation is obtained by:
