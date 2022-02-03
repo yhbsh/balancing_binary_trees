@@ -18,6 +18,27 @@
 
 
 
-## After the construction of the tree it should look like this:
+## After the construction, The tree should look like this:
 
 ![tree](./out/tree.jpg)
+
+
+# Now coming to the transformations
+
+* the first transformation is an easy one
+* it makes the right subtree an increasing list of nodes having only exactly one right child
+* and it makes the left subtree a decreasing list of nodes having only exactly one left child
+* this transoformation is obtained by:
+    1- for the right subtree:
+        * starting from the right child of the root
+        * perform right rotations for each node until no left child remains
+        * after that go right and repeat the second step
+    
+    2- for the left subtree:
+        * starting from the left child of the root
+        * perform left rotations for each node until no right child remains
+        * after that go left and repeat the second step
+
+    
+* after performing this simple algorithm we should obtain the following result:
+![first](./out/first_transformation.jpg)
