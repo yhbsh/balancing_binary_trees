@@ -31,8 +31,6 @@ int main() {
 
     draw(root, &out);
 
-    draw(root, &out);
-
 
 
 
