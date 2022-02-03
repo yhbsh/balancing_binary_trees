@@ -25,7 +25,7 @@
 
 # now coming to the transformations
 
->## the first transformation is an easy one
+>## The first transformation is an easy one
 * it makes the right subtree an increasing list of nodes having only exactly one right child
 * and it makes the left subtree a decreasing list of nodes having only exactly one left child
 * this transoformation is obtained by:
@@ -42,3 +42,23 @@
     
 * after performing this simple algorithm we should obtain the following result:
 >![first](./out/first_transformation.jpg)
+
+>## The second transformation is different
+* it makes the every node in the right and left subtrees have a determined number of left/right children
+* this determined number is generated using the formula:
+> * Un = Un-1 + k
+> * U0 = 0
+> * where k is an integer number given in the input
+
+* this transformation is obtained by:
+> 1- starting from the left/right subtrees of the root
+> 2- set i = 1
+> 3- perform exacly k * i iterations
+>> * in each iteration perform left/right rotations on the every right/left node
+> 4- after that test if you came to a leaf
+> 5- if it is a leaf, don't do anything and continue for the other subtree
+> 6- if both are leaves then stop the algorithm!
+
+
+* after performing this algorithm we should obtain the following result:
+>![second](./out/second_transformation.jpg)
