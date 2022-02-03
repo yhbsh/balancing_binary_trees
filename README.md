@@ -25,7 +25,7 @@
 
 # now coming to the transformations
 
-## the first transformation is an easy one
+>## the first transformation is an easy one
 * it makes the right subtree an increasing list of nodes having only exactly one right child
 * and it makes the left subtree a decreasing list of nodes having only exactly one left child
 * this transoformation is obtained by:
