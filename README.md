@@ -56,8 +56,9 @@
 >>
 > 2- set i = 1
 >>
-> 3- perform exacly k * i iterations
+> 3- perform exacly (k * i) iterations:
 >> * in each iteration perform left/right rotations on the every right/left node
+>>
 > 4- after that test if you came to a leaf
 >>
 > 5- if it is a leaf, don't do anything and continue for the other subtree
