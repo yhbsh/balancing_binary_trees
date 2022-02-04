@@ -70,5 +70,5 @@
 * so we have the following tree and we want to make the second transformation on it
 >![second_before](./out/second_transformation_before.jpg)
 
-* after performing this algorithm (with k = 1) we should obtain the following result:
+* after performing this algorithm (with k = 2) we should obtain the following result:
 >![second_after](./out/second_transformation_after.jpg)
