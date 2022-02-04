@@ -52,13 +52,13 @@
 > * where k is an integer number given in the input
 
 * this transformation is obtained by:
-> 1- starting from the left/right subtrees of the root
-> 2- set i = 1
-> 3- perform exacly k * i iterations
->> * in each iteration perform left/right rotations on the every right/left node
-> 4- after that test if you came to a leaf
-> 5- if it is a leaf, don't do anything and continue for the other subtree
-> 6- if both are leaves then stop the algorithm!
+>> 1- starting from the left/right subtrees of the root
+>> 2- set i = 1
+>> 3- perform exacly k * i iterations
+>>> * in each iteration perform left/right rotations on the every right/left node
+>> 4- after that test if you came to a leaf
+>> 5- if it is a leaf, don't do anything and continue for the other subtree
+>> 6- if both are leaves then stop the algorithm!
 
 
 
