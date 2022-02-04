@@ -45,7 +45,7 @@
 
 >## The second transformation is different
 * first the tree must be transformed via the first transformation in order for this to work!
-* it makes the every node in the right and left subtrees have a determined number of left/right children
+* it makes every node in the right and left subtrees have a determined number of left/right children
 * this determined number is generated using the formula:
 > * Un = Un-1 + k
 > * U0 = 0
@@ -72,3 +72,31 @@
 
 * after performing this algorithm (with k = 2) we should obtain the following result:
 >![second_after](./out/second_transformation_after.jpg)
+
+
+>## For the third transformation
+* first the tree must be transformed via the first transformation in order for this to work!
+* it makes every node in the right and left subtrees have a random number of left/right children
+* number of children for node in right/left subtrees is equal!
+
+* this transformation is obtained by:
+> 1- starting from the left/right subtrees of the root
+>>
+> 2- set i = random integer
+>>
+> 3- perform exacly "i" iterations:
+>> * in each iteration perform left/right rotations on the every right/left node
+>>
+> 4- after that test if you came to a leaf
+>>
+> 5- if it is a leaf, don't do anything and continue for the other subtree
+>>
+> 6- if both are leaves then stop the algorithm!
+
+
+
+* so we have the following tree and we want to make the second transformation on it
+>![second_before](./out/third_transformation_before.jpg)
+
+* after performing this algorithm (with k = 2) we should obtain the following result:
+>![second_after](./out/third_transformation_after.jpg)
