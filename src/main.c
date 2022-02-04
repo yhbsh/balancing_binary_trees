@@ -12,24 +12,24 @@ int main() {
 
     Node *root = init_tree(n);
 
+    draw(root, &out);
+
+
+    // first_transformation(root);    
+
     // draw(root, &out);
 
+    // second_transformation(root);
 
-    first_transformation(root);    
+    // draw(root, &out);
 
-    draw(root, &out);
+    // third_transformation(root);
 
-    second_transformation(root);
+    // draw(root, &out);
 
-    draw(root, &out);
+    // forth_transformation(root);
 
-    third_transformation(root);
-
-    draw(root, &out);
-
-    forth_transformation(root);
-
-    draw(root, &out);
+    // draw(root, &out);
 
 
 
