@@ -100,3 +100,34 @@
 
 * after performing this algorithm (with k = 2) we should obtain the following result:
 >![second_after](./out/third_transformation_after.jpg)
+
+
+>## For the forth transformation
+* first the tree must be transformed via the first transformation in order for this to work!
+* it makes every node in the right and left subtrees have a random number of left/right children
+* number of children for node in right/left subtrees are not necessarily equal!
+
+* this transformation is obtained by:
+> 1- starting from the left/right subtrees of the root
+>>
+> 2- set i1 = random integer, i2 = random integer
+>>
+> 3- perform exacly "i1" iterations:
+>> * in each iteration perform left rotations on every node in the right subtree
+>>
+> 4- perform exacly "i2 iterations:
+>> * in each iteration perform right rotations on every node in the left subtree
+>>
+> 5- after that test if you came to a leaf
+>>
+> 6- if it is a leaf, don't do anything and continue for the other subtree
+>>
+> 7- if both are leaves then stop the algorithm!
+
+
+
+* so we have the following tree and we want to make the second transformation on it
+>![second_before](./out/forth_transformation_before.jpg)
+
+* after performing this algorithm (with k = 2) we should obtain the following result:
+>![second_after](./out/forth_transformation_after.jpg)
