@@ -2,6 +2,7 @@
 
 * In This Repository, We Implement The Binary Tree Data Structure.
 * After That We Perform Some Very Special Transformations On The Tree Using Some Nice Algorithms
+* this was a first year university project (with some modifications and visualizations). teams of 2 people collaborated on creating this project.
 
 ## Binary Search Tree Structure
 
