@@ -10,12 +10,10 @@ Node *init_node(int data, bool color);
 Node *insert_tree(Node *root, Node *node);
 Node *init_tree(int n);
 
-Node *right_rotation(Node *node, Node* parent);
-Node *left_rotation(Node *node, Node* parent);
-
+Node *right_rotation(Node *node, Node *parent);
+Node *left_rotation(Node *node, Node *parent);
 
 void first_transformation(Node *root);
-
 
 Node *special_right_rotation(Node *node, Node *parent);
 Node *special_left_rotation(Node *node, Node *parent);

@@ -1,10 +1,7 @@
 #include "../lib/functions.h"
 
-
-
-
-
-int main() {
+int main()
+{
     srand(time(NULL));
 
     int n, out = 0;
@@ -14,8 +11,7 @@ int main() {
 
     draw(root, &out);
 
-
-    // first_transformation(root);    
+    // first_transformation(root);
 
     // draw(root, &out);
 
@@ -30,10 +26,6 @@ int main() {
     // forth_transformation(root);
 
     // draw(root, &out);
-
-
-
-
 
     return 0;
 }

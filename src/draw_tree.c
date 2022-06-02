@@ -1,11 +1,12 @@
 
-void draw_tree_dot(Node* R, FILE *f, int *nbNil)
+void draw_tree_dot(Node *R, FILE *f, int *nbNil)
 {
     if (R != NULL)
     {
-        fprintf(f, "\t\"%d %s\" [style=filled, fillcolor=\"%s\", fontcolor=\"%s\", fontsize=12, shape=doublecircle, fontname=\"Comic Sans MS\"];\n", R->data, R->color == true ? "black" : "white",R->color == true ? "black" : "white", R->color == true ? "white" : "black");
+        fprintf(f, "\t\"%d %s\" [style=filled, fillcolor=\"%s\", fontcolor=\"%s\", fontsize=12, shape=doublecircle, fontname=\"Comic Sans MS\"];\n", R->data, R->color == true ? "black" : "white", R->color == true ? "black" : "white", R->color == true ? "white" : "black");
         // Dessiner un arc vers le fils gauche
-        if (R->left != NULL) {
+        if (R->left != NULL)
+        {
             fprintf(f, "\t\"%d %s\" [style=filled, fillcolor=\"%s\", fontcolor=\"%s\", fontsize=12, shape=doublecircle, fontname=\"Comic Sans MS\"];\n", R->left->data, R->left->color == true ? "black" : "white", R->left->color == true ? "black" : "white", R->left->color == true ? "white" : "black");
             fprintf(f, "\t\"%d %s\" -> \"%d %s\";\n", R->data, R->color == true ? "black" : "white", R->left->data, R->left->color == true ? "black" : "white");
         }
@@ -17,10 +18,11 @@ void draw_tree_dot(Node* R, FILE *f, int *nbNil)
 
         // Dessiner un fils NIL virtuel et invisible au milieu (pour une meilleure s�paration des fils gauches et droits)
         fprintf(f, "\t\"NIL%d\" [style=invis];\n", *nbNil);
-        fprintf(f, "\t\"%d %s\" -> \"NIL%d\" [style=invis];\n", R->data, R->color == true ? "black" : "white",(*nbNil)++);
+        fprintf(f, "\t\"%d %s\" -> \"NIL%d\" [style=invis];\n", R->data, R->color == true ? "black" : "white", (*nbNil)++);
 
         // Dessiner un arc vers le fils droit
-        if (R->right != NULL) {
+        if (R->right != NULL)
+        {
             fprintf(f, "\t\"%d %s\" [style=filled, fillcolor=\"%s\", fontcolor=\"%s\", fontsize=12, shape=doublecircle, fontname=\"Comic Sans MS\"];\n", R->right->data, R->right->color == true ? "black" : "white", R->right->color == true ? "black" : "white", R->right->color == true ? "white" : "black");
             fprintf(f, "\t\"%d %s\" -> \"%d %s\";\n", R->data, R->color == true ? "black" : "white", R->right->data, R->right->color == true ? "black" : "white");
         }
@@ -36,9 +38,7 @@ void draw_tree_dot(Node* R, FILE *f, int *nbNil)
     }
 }
 
-
-
-void draw(Node* root, int *out)
+void draw(Node *root, int *out)
 {
 
     int nbNil;
@@ -67,8 +67,7 @@ void draw(Node* root, int *out)
         sprintf(cmd, "dot -Tjpg ../out/out%d.dot -o ../out/out%d.jpg && ..\\out\\out%d.jpg", *out, *out, *out);
 
         system(cmd);
-    
+
         (*out)++;
     }
-
 }
