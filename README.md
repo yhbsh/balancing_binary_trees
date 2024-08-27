@@ -2,7 +2,7 @@
 ![original](https://github.com/user-attachments/assets/061f8bc6-ec4d-4cc3-b477-50307dc4c783)
 
 ### Transformation 1
-![transformation-1](https://github.com/user-attachments/assets/07575187-5a56-430c-b4e2-92c0af26ae5d)
+![transformation-1](https://github.com/user-attachments/assets/32f15745-1390-48e3-b906-dc53c58ee9b8)
 
 ### Transformation 2
 ![transformation-2](https://github.com/user-attachments/assets/219779dc-6e27-41c7-a81f-63edc4ece006)
