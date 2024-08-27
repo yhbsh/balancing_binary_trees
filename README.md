@@ -8,7 +8,7 @@
 ![transformation-2](https://github.com/user-attachments/assets/219779dc-6e27-41c7-a81f-63edc4ece006)
 
 ### Transformation 3
-![transformation-3](https://github.com/user-attachments/assets/e8a684f9-1c38-41c8-9c07-c3548930ad5e)
+![transformation-3](https://github.com/user-attachments/assets/6fe54f5e-279f-4351-a51d-3d6cbd3b3785)
 
 ### Transformation 4
 ![transformation-4](https://github.com/user-attachments/assets/8d126e77-91e4-41f3-8233-7e98825281fa)
