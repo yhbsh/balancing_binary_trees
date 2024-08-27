@@ -1,31 +1,34 @@
-#include "../lib/functions.h"
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main()
-{
+#include "lib.h"
+
+int main(int argc, const char *argv[]) {
+    int nodes;
+
+    if (argc <= 1) {
+        nodes = 100;
+    }
+
     srand(time(NULL));
 
-    int n, out = 0;
-    scanf("%d", &n);
+    Node *root = bst_create(nodes);
 
-    Node *root = init_tree(n);
+    bst_transform_1(root);
+    bst_dump(root, "bst1.dot");
 
-    draw(root, &out);
+    bst_transform_2(root);
+    bst_dump(root, "bst2.dot");
 
-    // first_transformation(root);
+    bst_transform_3(root);
+    bst_dump(root, "bst3.dot");
 
-    // draw(root, &out);
+    bst_transform_4(root);
+    bst_dump(root, "bst4.dot");
 
-    // second_transformation(root);
-
-    // draw(root, &out);
-
-    // third_transformation(root);
-
-    // draw(root, &out);
-
-    // forth_transformation(root);
-
-    // draw(root, &out);
+    bst_free(&root);
 
     return 0;
 }
