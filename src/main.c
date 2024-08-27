@@ -6,10 +6,10 @@
 #include "lib.h"
 
 int main(int argc, const char *argv[]) {
-    int nodes;
+    int nodes = 100;
 
-    if (argc <= 1) {
-        nodes = 100;
+    if (argc == 2) {
+        nodes = atoi(argv[1]);
     }
 
     srand(time(NULL));
