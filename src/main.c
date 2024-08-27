@@ -15,6 +15,7 @@ int main(int argc, const char *argv[]) {
     srand(time(NULL));
 
     Node *root = bst_create(nodes);
+    bst_dump(root, "bst0.dot");
 
     bst_transform_1(root);
     bst_dump(root, "bst1.dot");
